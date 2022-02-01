@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
   final String title;
 
   @override
@@ -30,80 +29,294 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  set shape(BoxShape shape) {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.arrow_back),
+        centerTitle: true,
+        title: const Text(
+          'Start Activity',
+        ),
+      ),
       body: Container(
-        color: Colors.indigo[400],
-        child: Center(
-          child: Container(
-            child: Column(
+        margin: EdgeInsets.symmetric(
+          horizontal: (MediaQuery.of(context).size.width / 100) * 2,
+          vertical: (MediaQuery.of(context).size.width / 100) * 2,
+        ),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                Column(
                   children: [
                     Container(
-                      color: Colors.amberAccent,
-                      height: MediaQuery.of(context).size.height / 2,
-                      width: MediaQuery.of(context).size.width / 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.nordic_walking),
+                          SizedBox(height: 30),
+                          Text('Bluetooth'),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
                     ),
+                    const SizedBox(height: 10),
                     Container(
-                      color: Colors.blue,
-                      height: MediaQuery.of(context).size.height / 2,
-                      width: MediaQuery.of(context).size.width / 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text('Bluetooth'),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text('Bluetooth'),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text('Bluetooth'),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
                     ),
                   ],
                 ),
-                Row(
+                Column(
                   children: [
-                    Container(),
-                    Container(),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text('Bluetooth'),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text('Bluetooth'),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text(
+                            'Bluetooth',
+                          ),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: const [
+                          Icon(Icons.bluetooth),
+                          SizedBox(height: 30),
+                          Text(
+                            'Bluetooth',
+                          ),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.cyan[50],
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      width: (MediaQuery.of(context).size.width / 100) * 30,
+                      height: (MediaQuery.of(context).size.width / 100) * 20,
+                    ),
                   ],
                 ),
               ],
             ),
-          ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.bluetooth),
+                      SizedBox(height: 3),
+                      Text(
+                        'Bluetooth',
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.cyan[50],
+                    borderRadius: BorderRadius.circular(
+                      10.0,
+                    ),
+                  ),
+                  width: (MediaQuery.of(context).size.width / 100) * 15,
+                  height: (MediaQuery.of(context).size.width / 100) * 10,
+                ),
+                const SizedBox(width: 10),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.bluetooth),
+                      SizedBox(height: 3),
+                      Text(
+                        'Bluetooth',
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.cyan[50],
+                    borderRadius: BorderRadius.circular(
+                      10.0,
+                    ),
+                  ),
+                  width: (MediaQuery.of(context).size.width / 100) * 15,
+                  height: (MediaQuery.of(context).size.width / 100) * 10,
+                ),
+                const SizedBox(width: 10),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.bluetooth),
+                      SizedBox(height: 3),
+                      Text(
+                        'Bluetooth',
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.cyan[50],
+                    borderRadius: BorderRadius.circular(
+                      10.0,
+                    ),
+                  ),
+                  width: (MediaQuery.of(context).size.width / 100) * 15,
+                  height: (MediaQuery.of(context).size.width / 100) * 10,
+                ),
+                const SizedBox(width: 10),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Icon(Icons.bluetooth),
+                      SizedBox(height: 3),
+                      Text(
+                        'Bluetooth',
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.cyan[50],
+                    borderRadius: BorderRadius.circular(
+                      10.0,
+                    ),
+                  ),
+                  width: (MediaQuery.of(context).size.width / 100) * 15,
+                  height: (MediaQuery.of(context).size.width / 100) * 10,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
-      //
-      //
-      //
-      //
-      //
-      //
-      // Center(
-      //   child: Container(
-
-      //     color: Colors.black,
-      //     height: MediaQuery.of(context).size.height / 2,
-      //     width: MediaQuery.of(context).size.width / 2,
-      //     child: Column(
-      //       children: [
-      //         Container(
-      //             color: Colors.purpleAccent[400],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.yellow[900],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.redAccent[400],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.green[600],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.limeAccent[700],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //       ], // children
-      //     ),
-      //   ),
-      // ),
     );
-  } // build
-} // class
+  }
+}
