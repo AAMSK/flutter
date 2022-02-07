@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
   final String title;
 
   @override
@@ -30,80 +29,52 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  set shape(BoxShape shape) {}
-
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        color: Colors.indigo[400],
-        child: Center(
-          child: Container(
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.amberAccent,
-                      height: MediaQuery.of(context).size.height / 2,
-                      width: MediaQuery.of(context).size.width / 2,
-                    ),
-                    Container(
-                      color: Colors.blue,
-                      height: MediaQuery.of(context).size.height / 2,
-                      width: MediaQuery.of(context).size.width / 2,
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(),
-                    Container(),
-                  ],
-                ),
+        child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // ignore: prefer_const_literals_to_create_immutables
+              children: <Widget>[
+                const Icon(Icons.menu),
+                const Icon(Icons.more_vert),
               ],
             ),
-          ),
+            const CircleAvatar(
+              backgroundImage: AssetImage(
+                'image/Profile.jpeg',
+              ),
+              radius: 50,
+            ),
+            const Text(
+              'Alex Roy',
+            ),
+            const Text('Flutter App Devloper'),
+            Row(
+              children: [
+                Column(
+                  children: const [
+                    Text('45484'),
+                    Text('Income'),
+                  ],
+                ),
+                Column(children: const [
+                  Text('35512'),
+                  Text('Expenses'),
+                ]),
+                Column(children: const [
+                  Text('5446'),
+                  Text('Loan'),
+                ]),
+              ],
+            ),
+          ],
         ),
       ),
-      //
-      //
-      //
-      //
-      //
-      //
-      // Center(
-      //   child: Container(
-
-      //     color: Colors.black,
-      //     height: MediaQuery.of(context).size.height / 2,
-      //     width: MediaQuery.of(context).size.width / 2,
-      //     child: Column(
-      //       children: [
-      //         Container(
-      //             color: Colors.purpleAccent[400],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.yellow[900],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.redAccent[400],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.green[600],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //         Container(
-      //             color: Colors.limeAccent[700],
-      //             height: MediaQuery.of(context).size.height / 10,
-      //             width: MediaQuery.of(context).size.width),
-      //       ], // children
-      //     ),
-      //   ),
-      // ),
     );
-  } // build
-} // class
+  }
+}
